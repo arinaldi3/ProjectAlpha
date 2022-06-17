@@ -29,7 +29,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-LIST_REDIRECT_URL = "home"
+# LIST_REDIRECT_URL = "home"
+LOGIN_REDIRECT_URL = "home"
 
 # Application definition
 
