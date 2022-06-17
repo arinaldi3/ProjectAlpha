@@ -8,4 +8,3 @@ from django.urls import reverse_lazy
 class ProjectListView(ListView):
     model = Project
     template_name = "projects/list.html"
-    success_url = reverse_lazy("home")
