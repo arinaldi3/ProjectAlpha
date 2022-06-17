@@ -29,6 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LIST_REDIRECT_URL = "home"
 
 # Application definition
 
