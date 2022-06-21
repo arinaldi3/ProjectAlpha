@@ -9,7 +9,7 @@
         <p>
             <a href="{% url 'create_task' %}">Create a new task</a>
         </p>
-        {% for task in project.tasks.all %}
+        {% if project.tasks.all %}
             <table>
                 <thead>
                     <tr>
@@ -20,6 +20,7 @@
                         <th>Is completed</th>
                     </tr>
                 <tbody>
+                    {% for task in project.tasks.all %}
                         <tr>
                             <td>{{ task.name }}</td>
                             <td>{{ task.assignee }}</td>
@@ -27,12 +28,13 @@
                             <td>{{ task.due_date|date:"M d, Y" }}</td>
                             <td>{{ task.is_completed|yesno:"Yes,No" }}</td>
                         </tr>
-                    {% empty %} 
-                        <p>This project has no tasks</p>
                     {% endfor %}
                 </tbody>
                 </thead>
             </table>
+        {% else %} 
+            <p>This project has no tasks</p>
+        {% endif %}
     </div>
 </main>
 
