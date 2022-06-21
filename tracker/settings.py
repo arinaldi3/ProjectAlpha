@@ -32,10 +32,12 @@ ALLOWED_HOSTS = []
 LOGOUT_REDIRECT_URL = "login"
 LOGIN_REDIRECT_URL = "home"
 CREATE_REDIRECT_URL = "home"
+MARKDOWNIFY = {"default": {"BLEACH": False}}
 
 # Application definition
 
 INSTALLED_APPS = [
+    "markdownify.apps.MarkdownifyConfig",
     "tasks.apps.TasksConfig",
     "projects.apps.ProjectsConfig",
     "accounts.apps.AccountsConfig",
