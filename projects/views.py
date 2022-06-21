@@ -31,9 +31,3 @@ class ProjectCreateView(LoginRequiredMixin, CreateView):
 
     def get_success_url(self):
         return reverse_lazy("show_project", args=[self.object.id])
-
-    # def form_valid(self, form):
-    #     item = form.save(commit=False)
-    #     item.assignee = self.request.user
-    #     item.save()
-    #     return redirect("show_project")
