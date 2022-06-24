@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+# from django.shortcuts import render, redirect
 from django.views.generic.list import ListView
 from projects.models import Project
 from django.urls import reverse_lazy

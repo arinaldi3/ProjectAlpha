@@ -1,5 +1,5 @@
-from distutils.log import Log
-from django.shortcuts import render, redirect
+# from distutils.log import Log
+from django.shortcuts import redirect
 from django.views.generic.edit import CreateView, UpdateView
 from django.views.generic.list import ListView
 from django.contrib.auth.mixins import LoginRequiredMixin
